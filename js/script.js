@@ -17,8 +17,24 @@ for (var i = 0; i < friendMail.length; i++) {
 
 
 
-// // GIOCO DEI DADI
-// var myButtonEl = document.getElementById ('myButton');
-// myButtonEl.addEventListener('click', function()) {
-//
-// }
+// GIOCO DEI DADI
+
+var dadoUserEl = Math.floor(Math.random() * 6) + 1;
+var dadoCpuEl = Math.floor(Math.random() * 6) + 1;
+
+var myButtonEl = document.getElementById ('myButton');
+myButtonEl.addEventListener('click', function() {
+  var dadoUserEl = Math.floor(Math.random() * 6) + 1;
+  var dadoCpuEl = Math.floor(Math.random() * 6) + 1;
+
+  // mostro il risultato dei lanci
+  document.getElementById('dadoUser').innerHTML = ('Il tuo dado: ' + dadoUserEl);
+  document.getElementById('dadoCpu').innerHTML = ('Computer: ' + dadoCpuEl);
+  if (dadoUserEl > dadoCpuEl) {
+    document.getElementById('risultato').innerHTML = ('Hai VINTO!');
+  } else if ( dadoUserEl < dadoCpuEl) {
+    document.getElementById('risultato').innerHTML = ('Hai perso!');
+  } else if (dadoUserEl == dadoCpuEl) {
+    document.getElementById('risultato').innerHTML = ('Pari!');
+  }
+});
