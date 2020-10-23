@@ -34,7 +34,7 @@ myButtonEl.addEventListener('click', function() {
     document.getElementById('risultato').innerHTML = ('Hai VINTO!');
   } else if ( dadoUserEl < dadoCpuEl) {
     document.getElementById('risultato').innerHTML = ('Hai perso!');
-  } else if (dadoUserEl == dadoCpuEl) {
+  } else  {
     document.getElementById('risultato').innerHTML = ('Pari!');
   }
 });
